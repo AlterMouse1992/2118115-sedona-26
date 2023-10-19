@@ -1,0 +1,121 @@
+.modal {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(55 55 55 / 80%);
+    z-index: 500;
+}
+
+.modal__container{
+    position: relative;
+    margin: auto;
+    background-color: #ffffff;
+    z-index: 999;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.modal__content{
+    padding: 0 15px 15px 15px;
+}
+
+.modal__title{
+    @include title-big;
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 15px;
+}
+
+.modal__form{
+    margin: 20px 0 0 0;
+}
+
+.modal__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.modal__item{
+    padding-right: 13px;
+}
+
+.modal__label-txt{
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.modal__input--name, .modal__input--tel, .modal__input--time{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid lightgray;
+    color: #666;
+    height: 30px;
+    padding: 0 6px;
+    margin-bottom: 15px;font-size: 17px;
+}
+
+.modal__text{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.modal__text a {
+    color: #5c95da;
+    text-decoration: none;
+}
+
+.modal__button{
+    background-color: #5C250F;
+    color: #fff;
+    margin: 15px 0 0 0;
+    padding: 5px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 2;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.modal--close{
+    display: none;
+}
+
+.modal--open{
+    display: flex;
+}
+
+.modal__close-button{
+    position: relative;
+    top: 10px;
+    right: 0;
+    left: 93%;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: #5C250F;
+    }
+}
+
+.modal__svg{
+    position: absolute;
+    top: 2px;
+    right: 3px;
+}
+
+.modal__svg:hover{
+    fill: #5C250F;
+}

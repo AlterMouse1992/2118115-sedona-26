@@ -1,26 +1,16 @@
-@import "../mixins.scss";
-
-.copyright {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: inherit;
+.copyright{
+    background-color:#24282f
 }
 
-.copyright__link {
-    text-decoration: none;
-    vertical-align: middle;
-    color: #000000;
+.copyright__text{
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 32px;
+    padding: 15px 20px;
+    margin: 0 auto;
+    text-align: center;
 
-    &:hover {
-        color: #81B3D2;
-    }
-
-    &:active {
-        color: #B3B3B3;
+    @media (min-width: $tablet-width) {
+        font-size: 18px;
     }
 }
-
-.copyright__svg {
-    vertical-align: middle;
-    margin-left: 10px;
-  }

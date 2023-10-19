@@ -1,0 +1,95 @@
+@import "../mixins";
+
+/* Слайдер: */
+.slider-plan{
+    max-width: 90%;
+    /* Положение элемента устанавливается относительно его исходной позиции: */
+    position: relative;
+    /* Центрируем по горизонтали: */
+    margin: auto;
+
+    @media (min-width: $big-tablet-width){
+        max-width: 100%;
+    }
+}
+
+.slider-plan__item{
+    text-align: center;
+
+    @media (min-width: $big-tablet-width){
+        display: block;
+    }
+}
+
+/* Картинка масштабируется по отношению к родительскому элементу: */
+.slider-plan .slider-plan__item img {
+    /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+    object-fit: cover;
+}
+
+/* Кнопки назад и вперёд: */
+.slider-plan .slider-plan__previous, .slider-plan .slider-plan__next {
+    /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
+    cursor: pointer;
+    /* Положение элемента задаётся относительно границ браузера: */
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    /* Оформление самих кнопок: */
+    color: #676767;
+    font-weight: bold;
+    font-size: 16px;
+    /* Плавное появление фона при наведении курсора: */
+    transition: 0.6s ease;
+    /* Скругление границ: */
+    border-radius: 3px 0 0 3px;
+
+    @media (min-width: $big-tablet-width){
+        display: none;
+    }
+}
+
+.slider-plan .slider-plan__next {
+    right: 5px;
+    border-radius: 3px 0 0 3px;
+    transform: rotate(180deg);
+}
+
+/* При наведении курсора на кнопки добавляем фон кнопок: */
+.slider-plan .slider-plan__previous:hover,
+.slider-plan .slider-plan__next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация слайдов: */
+.slider-plan .slider-plan__item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+
+    @media (min-width: $big-tablet-width){
+        display: block !important;
+    }
+}
+@keyframes fade {
+    /* Устанавливаем и изменяем степень прозрачности: */
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.slider-plan__title{
+    @include plan-list;
+
+    @media (min-width: $big-tablet-width){
+        font-size: 14px;
+    }
+}
+
+.slider-plan__item img {
+    width: 200px;
+}

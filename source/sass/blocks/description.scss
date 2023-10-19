@@ -1,0 +1,37 @@
+.description{
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 30px;
+    background-color: #fff;
+    color: #000000;
+    text-align: justify;
+    letter-spacing: 1px;
+    text-indent: 25px;
+    margin-top: 20px;
+
+    @media (min-width: $big-tablet-width){
+    }
+}
+
+.description__text{
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.description__text b{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px auto;
+    letter-spacing: 3px;
+    color: #000000;
+}
+
+.description__text--first{
+    margin-top: 20px;
+}
+
+.description__text-title{
+    @include title-big;
+}

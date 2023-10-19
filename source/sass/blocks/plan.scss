@@ -1,0 +1,27 @@
+.plan{
+    background-color: #ffffff;
+    color: #000000;
+
+    @media (min-width: $big-tablet-width){
+    }
+}
+.plan__title{
+    @include title-big;
+}
+
+.plan__list{
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    list-style-type: none;
+
+    @media (min-width: $tablet-width) {
+        margin: 20px 150px 0;
+    }
+
+    @media (min-width: $big-tablet-width){
+        margin: 0;
+        display: flex;
+    }
+
+}

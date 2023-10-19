@@ -1,0 +1,83 @@
+@import "../variable.scss";
+
+.view{
+    font-family: inherit;
+    background-color: #fff;
+    color: #000000;
+    margin-bottom: 10px;
+
+    @media (min-width: $big-tablet-width){
+    }
+}
+
+.view__title{
+    @include title-big;
+}
+
+.view__wrapper{
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+
+.view__form{
+    margin: 20px 0;
+}
+
+.view__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.view__item{
+    padding-right: 13px;
+}
+
+.view__label-txt{
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.view__input--name, .view__input--tel, .view__input--time{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid lightgray;
+    color: #666;
+    height: 45px;
+    padding: 0 6px;
+    margin-bottom: 15px;font-size: 17px;
+}
+
+.view__text{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.view__text a {
+    color: #5c95da;
+    text-decoration: none;
+}
+
+.view__button{
+    background-color: #5C250F;
+    color: #fff;
+    margin: 15px 0;
+    padding: 5px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 2;
+    cursor: pointer;
+    border-radius: 20px;
+
+    @media (min-width: $tablet-width) {
+        font-size: 18px;
+    }
+
+    @media (min-width: $big-tablet-width){
+        font-size: 13px;
+    }
+}
